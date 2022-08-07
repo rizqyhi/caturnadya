@@ -33,13 +33,31 @@
           >
         </h1>
 
-        <img
-          src="./images/together.png"
-          alt="Catur & Nadya"
+        <picture
           data-aos="fade-up"
           data-aos-once="true"
           data-aos-duration="1000"
-        />
+        >
+          <source
+            type="image/webp"
+            srcset="
+              ./images/together.png?as=webp&width=480,
+              ./images/together.png?as=webp&width=960 2x
+            "
+          />
+          <source
+            type="image/png"
+            srcset="
+              ./images/together.png?width=480,
+              ./images/together.png?width=960 2x
+            "
+          />
+          <img
+            src="./images/together.png?width=480"
+            width="480"
+            alt="Catur & Nadya"
+          />
+        </picture>
       </div>
 
       <blockquote class="p-8 text-center">
@@ -69,7 +87,23 @@
         <p class="p-4 text-center text-sm">
           Putra Bapak Sunarto Roesoel<br />&amp; Ibu Enny Suwarti
         </p>
-        <img src="./images/catur.png" alt="" />
+        <picture>
+          <source
+            type="image/webp"
+            srcset="
+              ./images/catur.png?as=webp&width=480,
+              ./images/catur.png?as=webp&width=960 2x
+            "
+          />
+          <source
+            type="image/png"
+            srcset="
+              ./images/catur.png?width=480,
+              ./images/catur.png?width=960 2x
+            "
+          />
+          <img src="./images/catur.png?width=480" width="480" alt="" />
+        </picture>
       </div>
 
       <div class="py-8 text-2xl text-center font-serif italic">dengan</div>
@@ -81,7 +115,23 @@
         <p class="p-4 text-center text-sm">
           Putri Bapak Akhmad Noor Rusdy<br />&amp; Ibu Ety Heriyati
         </p>
-        <img src="./images/nadya.png" alt="" />
+        <picture>
+          <source
+            type="image/webp"
+            srcset="
+              ./images/nadya.png?as=webp&width=480,
+              ./images/nadya.png?as=webp&width=960 2x
+            "
+          />
+          <source
+            type="image/png"
+            srcset="
+              ./images/nadya.png?width=480,
+              ./images/nadya.png?width=960 2x
+            "
+          />
+          <img src="./images/nadya.png?width=480" width="480" alt="" />
+        </picture>
       </div>
 
       <section
