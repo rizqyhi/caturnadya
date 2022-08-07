@@ -12,9 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "@alpinejs/intersect": "^3.10.3",
+    "@types/google-apps-script": "^1.0.53",
     "alpinejs": "^3.10.3",
-    "animate.css": "^4.1.1",
-    "aos": "^2.3.4"
+    "aos": "^2.3.4",
+    "axios": "^0.27.2"
   },
   "devDependencies": {
     "@parcel/transformer-image": "^2.7.0",
