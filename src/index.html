@@ -16,7 +16,7 @@
 
     <script defer src="./bahagia.js" type="module"></script>
   </head>
-  <body class="text-base" x-data="{ showFooter: false }">
+  <body class="text-base" x-data="bahagia">
     <div class="max-w-lg mx-auto px-4 overflow-x-hidden">
       <div class="min-h-screen">
         <h1
@@ -24,8 +24,8 @@
           data-aos="fade-down"
           data-aos-once="true"
           data-aos-duration="1000"
-          x-intersect:enter="showFooter = false; console.log('enter')"
-          x-intersect:leave="showFooter = true; console.log('leave')"
+          x-intersect:enter="showFooter = false"
+          x-intersect:leave="showFooter = true"
         >
           <span class="block mb-4 text-xl">The Wedding of</span>
           <span class="block text-5xl font-bold text-teal-700 font-serif"
@@ -330,21 +330,64 @@
         </div>
         <div
           class="absolute bottom-0 left-0 h-2/3 w-full bg-gradient-to-t from-cream to-transparent"
+          x-show="isValidGuest"
         ></div>
       </div>
 
       <section
         class="relative -mt-40 mb-14 -mx-4 p-4 rounded-t-3xl bg-teal-900 text-white"
+        x-show="isValidGuest"
       >
-        <h3 class="mb-4 text-3xl font-serif">Konfirmasi Kehadiran</h3>
-        <div class="py-2 px-4 mb-4 rounded bg-white bg-opacity-20">
-          John Doe
+        <div x-show="!isAlreadyRsvp || isNotAttending">
+          <h3 class="mb-4 text-3xl font-serif">Konfirmasi Kehadiran</h3>
+          <div
+            class="py-2 px-4 mb-4 rounded bg-white bg-opacity-20"
+            x-text="guest.name"
+          ></div>
+          <p class="text-sm">Apakah Anda akan hadir?</p>
+          <div class="grid grid-cols-2 gap-4 py-8">
+            <button
+              class="btn"
+              :class="{'btn-cream': isAttending}"
+              :disabled="disableRsvpButton"
+              @click="doRsvp('yes')"
+            >
+              Ya, tentu saja
+            </button>
+            <button
+              class="btn"
+              :class="{'btn-cream': isNotAttending}"
+              :disabled="disableRsvpButton"
+              @click="doRsvp('no')"
+            >
+              Maaf, tidak
+            </button>
+          </div>
         </div>
-        <p class="text-sm">Apakah Anda akan hadir?</p>
-        <div class="grid grid-cols-2 gap-4 py-8">
-          <button class="btn btn-cream">Ya, tentu saja</button>
-          <button class="btn">Maaf, tidak</button>
+
+        <div x-show="isAttending">
+          <h3 class="mb-4 text-3xl font-serif">
+            Terima kasih telah bersedia hadir,
+            <em class="italic" x-text="guest.name"></em>.
+          </h3>
+          <p class="text-sm mb-4">
+            Gunakan kode berikut untuk konfirmasi di meja tamu:
+          </p>
+          <div
+            class="py-2 px-4 mb-4 rounded bg-white bg-opacity-20"
+            x-text="guest.code"
+          ></div>
+          <div class="py-8 text-center">
+            <button
+              class="btn"
+              :disabled="disableRsvpButton"
+              @click="doRsvp('no')"
+            >
+              Batalkan konfirmasi
+            </button>
+          </div>
         </div>
+
         <p class="text-sm">
           <strong>Catatan:</strong><br />
           Acara ini akan mengusung tema outdoor, Kami sarankan tidak menggunakan

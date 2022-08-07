@@ -19,3 +19,7 @@ body {
   @apply hover:bg-opacity-100;
   @apply focus:bg-opacity-100;
 }
+
+.btn[disabled] {
+  @apply opacity-50;
+}

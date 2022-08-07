@@ -1,3 +1,5 @@
+const ATTENDING_CODE = 'dimsnay13'
+
 function doGet(request) {
   if (request.parameter.action && request.parameter.action === 'getGuest') {
     return JsonResponse(getGuest(request.parameter.name))
@@ -38,6 +40,10 @@ function getGuest(name) {
       name: guest.getValue(),
       rsvp: guest.offset(0, 1).getValue()
     }
+
+    if (result.rsvp === 'yes') {
+      result.code = ATTENDING_CODE
+    }
   }
 
   logs.appendRow([JSON.stringify(result)])
@@ -62,7 +68,12 @@ function doRsvp(name, attending) {
 
     result = {
       success: true,
-      message: `rsvped_${attending}`
+      name: name,
+      rsvp: attending
+    }
+
+    if (result.rsvp === 'yes') {
+      result.code = ATTENDING_CODE
     }
   }
 
