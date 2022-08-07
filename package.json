@@ -2,12 +2,20 @@
   "name": "caturnadya",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "dev": "npx parcel src/index.html"
+    "start": "parcel",
+    "build": "parcel build"
   },
   "author": "Rizqy H.",
   "license": "ISC",
+  "dependencies": {
+    "@alpinejs/intersect": "^3.10.3",
+    "alpinejs": "^3.10.3",
+    "animate.css": "^4.1.1",
+    "aos": "^2.3.4"
+  },
   "devDependencies": {
     "@parcel/transformer-image": "^2.7.0",
     "parcel": "^2.7.0",
@@ -15,11 +23,5 @@
     "prettier": "2.7.1",
     "sharp": "^0.29.3",
     "tailwindcss": "^3.1.8"
-  },
-  "dependencies": {
-    "@alpinejs/intersect": "^3.10.3",
-    "alpinejs": "^3.10.3",
-    "animate.css": "^4.1.1",
-    "aos": "^2.3.4"
   }
 }
