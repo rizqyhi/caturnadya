@@ -1,8 +1,21 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import 'aos/dist/aos.css';
 
 body {
-    background: #F4E9E1;
-    color: #31324B;
+  background: #f4e9e1;
+  color: #31324b;
+}
+
+.btn {
+  @apply p-4 rounded-full bg-white bg-opacity-20;
+  @apply hover:bg-opacity-30;
+  @apply focus:bg-opacity-40;
+}
+
+.btn-cream {
+  @apply bg-cream bg-opacity-100 text-teal-700 font-bold;
+  @apply hover:bg-opacity-100;
+  @apply focus:bg-opacity-100;
 }

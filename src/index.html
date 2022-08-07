@@ -1,20 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Catur &amp; Nadya</title>
-    <link href="./index.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&family=DM+Serif+Display:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./index.css" rel="stylesheet" />
+
+    <script defer src="./bahagia.js" type="module"></script>
   </head>
-  <body>
-    <div class="max-w-lg mx-auto">
-      <h1 class="text-center">
-        <span class="block">The Wedding of</span>
-        <span class="block text-3xl font-bold"
-          >Dimas <em class="italic">&</em> Nadya</span
+  <body class="text-base" x-data="{ showFooter: false }">
+    <div class="max-w-lg mx-auto px-4 overflow-x-hidden">
+      <div class="min-h-screen">
+        <h1
+          class="py-24 text-center"
+          data-aos="fade-down"
+          data-aos-once="true"
+          data-aos-duration="1000"
+          x-intersect:enter="showFooter = false; console.log('enter')"
+          x-intersect:leave="showFooter = true; console.log('leave')"
         >
-      </h1>
+          <span class="block mb-4 text-xl">The Wedding of</span>
+          <span class="block text-5xl font-bold text-teal-700 font-serif"
+            >Dimas <em class="italic">&</em> Nadya</span
+          >
+        </h1>
+
+        <img
+          src="./images/together.png"
+          alt="Catur & Nadya"
+          data-aos="fade-up"
+          data-aos-once="true"
+          data-aos-duration="1000"
+        />
+      </div>
+
+      <blockquote class="p-8 text-center">
+        <p class="mb-8 font-bold">
+          وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا
+          لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً ۚ
+          إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِقَوْمٍ يَتَفَكَّرُونَ
+        </p>
+        <p>
+          &ldquo;Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
+          untukmu isteri-isteri dari jenismu sendiri, supaya kamu cenderung dan
+          merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan
+          sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat
+          tanda-tanda bagi kaum yang berfikir.&rdquo;
+        </p>
+        <cite>(QS. Ar-Rum: 21)</cite>
+      </blockquote>
+
+      <div class="mb-8 text-center text-lg">
+        Dengan izin Allah, kami mengundang saudara/i pada pernikahan
+      </div>
+
+      <div data-aos="fade-right" data-aos-duration="1000">
+        <h2 class="text-4xl text-teal-700 text-center font-serif">
+          Dimas Catur Wibowo
+        </h2>
+        <p class="p-4 text-center text-sm">
+          Putra Bapak Sunarto Roesoel<br />&amp; Ibu Enny Suwarti
+        </p>
+        <img src="./images/catur.png" alt="" />
+      </div>
+
+      <div class="py-8 text-2xl text-center font-serif italic">dengan</div>
+
+      <div data-aos="fade-left" data-aos-duration="1000" data-aos-offset="500">
+        <h2 class="text-4xl text-teal-700 text-center font-serif">
+          Nadya Noor Fitrianti
+        </h2>
+        <p class="p-4 text-center text-sm">
+          Putri Bapak Akhmad Noor Rusdy<br />&amp; Ibu Ety Heriyati
+        </p>
+        <img src="./images/nadya.png" alt="" />
+      </div>
+
+      <section
+        class="mx-4 md:mx-8 mt-20 mb-8 p-4 rounded-3xl bg-teal-900 text-white"
+      >
+        <h3 class="mb-4 text-3xl text-center">Acara</h3>
+        <p class="mb-4 text-center text-sm">
+          Insya Allah akan diselenggarakan pada tanggal
+        </p>
+        <p class="py-4 text-4xl text-center">21 Agustus 2022</p>
+        <hr class="my-4" />
+        <div class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+          <div class="text-right">Akad</div>
+          <div class>08.00 - 09.00 WIB</div>
+          <div class="text-right">Walimah Akad</div>
+          <div class>09.30 - 12.00 WIB</div>
+        </div>
+      </section>
+
+      <section
+        class="mx-4 md:mx-8 mt-8 mb-20 p-4 rounded-3xl overflow-hidden bg-slate-700 text-white"
+      >
+        <h3 class="mb-4 text-3xl text-center">Tempat</h3>
+        <p class="mb-4 text-center text-sm">
+          Jalan Sukabakti 1 No. 5, Sawah Baru, Kec. Ciputat, Kota Tangerang
+          Selatan, Banten 15414
+        </p>
+        <div class="-mx-4 -mb-4">
+          <iframe
+            class="max-w-full"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d429.0555243353634!2d106.7222421425947!3d-6.305268171169063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e54e34c6d6e7%3A0x297ae4becffe98c2!2sBi%20Coffee!5e0!3m2!1sen!2sid!4v1659846547295!5m2!1sen!2sid"
+            width="600"
+            height="250"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+
+      <div class="relative overflow-x-hidden">
+        <div class="grid grid-cols-2 gap-4">
+          <picture
+            class="rounded overflow-hidden"
+            data-aos="fade-top"
+            data-aos-delay="100"
+            data-aos-once="true"
+          >
+            <source
+              type="image/webp"
+              srcset="
+                ./images/1.jpg?as=webp&width=300,
+                ./images/1.jpg?as=webp&width=600 2x
+              "
+            />
+            <source
+              type="image/jpeg"
+              srcset="./images/1.jpg?width=300, ./images/1.jpg?width=600 2x"
+            />
+            <img src="./images/1.jpg?width=300" width="300" />
+          </picture>
+          <picture
+            class="rounded overflow-hidden mt-8"
+            data-aos="fade-top"
+            data-aos-delay="200"
+            data-aos-once="true"
+          >
+            <source
+              type="image/webp"
+              srcset="
+                ./images/2.jpg?as=webp&width=300,
+                ./images/2.jpg?as=webp&width=600 2x
+              "
+            />
+            <source
+              type="image/jpeg"
+              srcset="./images/2.jpg?width=300, ./images/2.jpg?width=600 2x"
+            />
+            <img src="./images/2.jpg?width=300" width="300" />
+          </picture>
+          <picture
+            class="rounded overflow-hidden -mt-8"
+            data-aos="fade-top"
+            data-aos-delay="300"
+            data-aos-once="true"
+          >
+            <source
+              type="image/webp"
+              srcset="
+                ./images/3.jpg?as=webp&width=300,
+                ./images/3.jpg?as=webp&width=600 2x
+              "
+            />
+            <source
+              type="image/jpeg"
+              srcset="./images/3.jpg?width=300, ./images/3.jpg?width=600 2x"
+            />
+            <img src="./images/3.jpg?width=300" width="300" />
+          </picture>
+          <picture
+            class="rounded overflow-hidden"
+            data-aos="fade-top"
+            data-aos-delay="400"
+            data-aos-once="true"
+          >
+            <source
+              type="image/webp"
+              srcset="
+                ./images/4.jpg?as=webp&width=300,
+                ./images/4.jpg?as=webp&width=600 2x
+              "
+            />
+            <source
+              type="image/jpeg"
+              srcset="./images/4.jpg?width=300, ./images/4.jpg?width=600 2x"
+            />
+            <img src="./images/4.jpg?width=300" width="300" />
+          </picture>
+          <picture
+            class="rounded overflow-hidden -mt-8"
+            data-aos="fade-top"
+            data-aos-delay="500"
+            data-aos-once="true"
+          >
+            <source
+              type="image/webp"
+              srcset="
+                ./images/5.jpg?as=webp&width=300,
+                ./images/5.jpg?as=webp&width=600 2x
+              "
+            />
+            <source
+              type="image/jpeg"
+              srcset="./images/5.jpg?width=300, ./images/5.jpg?width=600 2x"
+            />
+            <img src="./images/5.jpg?width=300" width="300" />
+          </picture>
+          <picture
+            class="rounded overflow-hidden"
+            data-aos="fade-top"
+            data-aos-delay="600"
+            data-aos-once="true"
+          >
+            <source
+              type="image/webp"
+              srcset="
+                ./images/6.jpg?as=webp&width=300,
+                ./images/6.jpg?as=webp&width=600 2x
+              "
+            />
+            <source
+              type="image/jpeg"
+              srcset="./images/6.jpg?width=300, ./images/6.jpg?width=600 2x"
+            />
+            <img src="./images/6.jpg?width=300" width="300" />
+          </picture>
+          <picture
+            class="rounded overflow-hidden -mt-8"
+            data-aos="fade-top"
+            data-aos-delay="700"
+            data-aos-once="true"
+          >
+            <source
+              type="image/webp"
+              srcset="
+                ./images/7.jpg?as=webp&width=300,
+                ./images/7.jpg?as=webp&width=600 2x
+              "
+            />
+            <source
+              type="image/jpeg"
+              srcset="./images/7.jpg?width=300, ./images/7.jpg?width=600 2x"
+            />
+            <img src="./images/7.jpg?width=300" width="300" />
+          </picture>
+          <picture
+            class="rounded overflow-hidden"
+            data-aos="fade-top"
+            data-aos-delay="800"
+            data-aos-once="true"
+          >
+            <source
+              type="image/webp"
+              srcset="
+                ./images/8.jpg?as=webp&width=300,
+                ./images/8.jpg?as=webp&width=600 2x
+              "
+            />
+            <source
+              type="image/jpeg"
+              srcset="./images/8.jpg?width=300, ./images/8.jpg?width=600 2x"
+            />
+            <img src="./images/8.jpg?width=300" width="300" />
+          </picture>
+        </div>
+        <div
+          class="absolute bottom-0 left-0 h-2/3 w-full bg-gradient-to-t from-cream to-transparent"
+        ></div>
+      </div>
+
+      <section
+        class="relative -mt-40 mb-14 -mx-4 p-4 rounded-t-3xl bg-teal-900 text-white"
+      >
+        <h3 class="mb-4 text-3xl font-serif">Konfirmasi Kehadiran</h3>
+        <div class="py-2 px-4 mb-4 rounded bg-white bg-opacity-20">
+          John Doe
+        </div>
+        <p class="text-sm">Apakah Anda akan hadir?</p>
+        <div class="grid grid-cols-2 gap-4 py-8">
+          <button class="btn btn-cream">Ya, tentu saja</button>
+          <button class="btn">Maaf, tidak</button>
+        </div>
+        <p class="text-sm">
+          <strong>Catatan:</strong><br />
+          Acara ini akan mengusung tema outdoor, Kami sarankan tidak menggunakan
+          sepatu heels pada saat ke acara.
+        </p>
+      </section>
+
+      <footer
+        class="fixed bottom-0 left-0 w-full bg-cream font-serif"
+        x-show="showFooter"
+      >
+        <div class="max-w-lg mx-auto flex justify-between p-4">
+          <div>
+            <strong>Dimas <em class="italic">&amp;</em> Nay</strong>
+          </div>
+          <div>21/08/22</div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
